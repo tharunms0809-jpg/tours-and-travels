@@ -1,0 +1,8 @@
+{
+  "name": "tours-and-travels-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd client && npm run build && mkdir -p ../dist && cp -r dist/* ../dist"
+  }
+}
