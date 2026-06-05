@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 const Package = require('../models/Package');
 
-const MONGODB_URI = 'mongodb://localhost:27017/toursdb';
+const MONGODB_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/toursdb';
 
 const packages = [
   // GOA
