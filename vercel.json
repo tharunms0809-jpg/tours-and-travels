@@ -23,7 +23,11 @@
       "dest": "/api/index.js"
     },
     {
-      "src": "/((?!api|uploads).*)",
+      "src": "/(.*\\.(?:js|css|png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|ttf|eot|json|map))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
       "dest": "/index.html"
     }
   ]
