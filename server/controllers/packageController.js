@@ -83,9 +83,18 @@ exports.getPackageById = async (req, res) => {
 // @route   POST /api/packages
 exports.createPackage = async (req, res) => {
   try {
-    // Handle uploaded images
+    // Handle uploaded image files
     if (req.files && req.files.length > 0) {
       req.body.images = req.files.map(file => `/uploads/${file.filename}`);
+    }
+    // Handle URL-based images
+    else if (req.body.imageUrls) {
+      try {
+        req.body.images = JSON.parse(req.body.imageUrls);
+      } catch (e) {
+        req.body.images = [req.body.imageUrls];
+      }
+      delete req.body.imageUrls;
     }
 
     // Parse JSON fields if sent as strings
@@ -114,8 +123,18 @@ exports.createPackage = async (req, res) => {
 // @route   PUT /api/packages/:id
 exports.updatePackage = async (req, res) => {
   try {
+    // Handle uploaded image files
     if (req.files && req.files.length > 0) {
       req.body.images = req.files.map(file => `/uploads/${file.filename}`);
+    }
+    // Handle URL-based images passed as JSON string
+    else if (req.body.imageUrls) {
+      try {
+        req.body.images = JSON.parse(req.body.imageUrls);
+      } catch (e) {
+        req.body.images = [req.body.imageUrls];
+      }
+      delete req.body.imageUrls;
     }
 
     if (typeof req.body.duration === 'string') req.body.duration = JSON.parse(req.body.duration);
@@ -123,6 +142,8 @@ exports.updatePackage = async (req, res) => {
     if (typeof req.body.transport === 'string') req.body.transport = JSON.parse(req.body.transport);
     if (typeof req.body.groupSize === 'string') req.body.groupSize = JSON.parse(req.body.groupSize);
     if (typeof req.body.highlights === 'string') req.body.highlights = JSON.parse(req.body.highlights);
+    if (typeof req.body.inclusions === 'string') req.body.inclusions = JSON.parse(req.body.inclusions);
+    if (typeof req.body.exclusions === 'string') req.body.exclusions = JSON.parse(req.body.exclusions);
     if (typeof req.body.itinerary === 'string') req.body.itinerary = JSON.parse(req.body.itinerary);
 
     const pkg = await Package.findByIdAndUpdate(req.params.id, req.body, {
