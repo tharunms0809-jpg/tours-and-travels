@@ -1,12 +1,8 @@
 /**
  * Vercel Serverless Entry Point
- * This file wraps the Express app for Vercel's serverless runtime.
+ * Wraps the Express app for Vercel's serverless runtime.
+ * Environment variables are set in the Vercel dashboard — no .env file needed here.
  */
-const path = require('path');
-
-// Load env variables from the root .env
-require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
-
 const app = require('../server/server');
 
 module.exports = app;
