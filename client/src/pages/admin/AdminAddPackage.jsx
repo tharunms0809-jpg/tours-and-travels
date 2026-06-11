@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Save, ArrowLeft, Plus, X } from 'lucide-react'
+import { Save, ArrowLeft, Plus, X, Image, Upload, Link, Trash2 } from 'lucide-react'
 import api from '../../utils/api'
 import toast from 'react-hot-toast'
 
@@ -10,6 +10,14 @@ export default function AdminAddPackage() {
   const isEdit = !!id
   const [loading, setLoading] = useState(isEdit)
   const [submitting, setSubmitting] = useState(false)
+  const fileInputRef = useRef(null)
+
+  // Image state
+  const [imageMode, setImageMode] = useState('url') // 'url' | 'upload'
+  const [imageUrl, setImageUrl] = useState('')
+  const [imageFile, setImageFile] = useState(null)
+  const [imagePreview, setImagePreview] = useState('')
+  const [existingImages, setExistingImages] = useState([])
 
   const [form, setForm] = useState({
     title: '',
@@ -62,6 +70,12 @@ export default function AdminAddPackage() {
         inclusions: pkg.inclusions?.length > 0 ? pkg.inclusions : [''],
         exclusions: pkg.exclusions?.length > 0 ? pkg.exclusions : ['']
       })
+      // Load existing images
+      if (pkg.images?.length > 0) {
+        setExistingImages(pkg.images)
+        setImagePreview(pkg.images[0])
+        setImageUrl(pkg.images[0])
+      }
     } catch (err) {
       toast.error('Failed to load package')
       navigate('/admin/packages')
@@ -91,46 +105,76 @@ export default function AdminAddPackage() {
     setForm({ ...form, [field]: updated })
   }
 
+  // Image handlers
+  const handleFileChange = (e) => {
+    const file = e.target.files[0]
+    if (!file) return
+    if (file.size > 5 * 1024 * 1024) {
+      toast.error('Image must be under 5MB')
+      return
+    }
+    setImageFile(file)
+    setImagePreview(URL.createObjectURL(file))
+    setImageUrl('')
+  }
+
+  const handleUrlChange = (e) => {
+    setImageUrl(e.target.value)
+    setImagePreview(e.target.value)
+    setImageFile(null)
+  }
+
+  const handleRemoveImage = () => {
+    setImageFile(null)
+    setImagePreview('')
+    setImageUrl('')
+    setExistingImages([])
+    if (fileInputRef.current) fileInputRef.current.value = ''
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setSubmitting(true)
 
-    const payload = {
-      title: form.title,
-      description: form.description,
-      destination: form.destination,
-      price: Number(form.price),
-      duration: {
-        days: Number(form.durationDays),
-        nights: Number(form.durationNights)
-      },
-      groupSize: {
-        min: Number(form.groupSizeMin),
-        max: Number(form.groupSizeMax)
-      },
-      hotel: {
-        name: form.hotelName,
-        rating: Number(form.hotelRating),
-        type: form.hotelType
-      },
-      transport: {
-        type: form.transportType,
-        details: form.transportDetails
-      },
-      category: form.category,
-      availability: form.availability,
-      featured: form.featured,
-      highlights: form.highlights.filter(h => h.trim()),
-      inclusions: form.inclusions.filter(i => i.trim()),
-      exclusions: form.exclusions.filter(e => e.trim())
-    }
-
     try {
+      // Build payload as FormData to support file upload
+      const formData = new FormData()
+
+      // All basic fields
+      formData.append('title', form.title)
+      formData.append('description', form.description)
+      formData.append('destination', form.destination)
+      formData.append('price', Number(form.price))
+      formData.append('duration', JSON.stringify({ days: Number(form.durationDays), nights: Number(form.durationNights) }))
+      formData.append('groupSize', JSON.stringify({ min: Number(form.groupSizeMin), max: Number(form.groupSizeMax) }))
+      formData.append('hotel', JSON.stringify({ name: form.hotelName, rating: Number(form.hotelRating), type: form.hotelType }))
+      formData.append('transport', JSON.stringify({ type: form.transportType, details: form.transportDetails }))
+      formData.append('category', form.category)
+      formData.append('availability', form.availability)
+      formData.append('featured', form.featured)
+      formData.append('highlights', JSON.stringify(form.highlights.filter(h => h.trim())))
+      formData.append('inclusions', JSON.stringify(form.inclusions.filter(i => i.trim())))
+      formData.append('exclusions', JSON.stringify(form.exclusions.filter(e => e.trim())))
+
+      // Image handling
+      if (imageFile) {
+        // File upload — sent as multipart
+        formData.append('images', imageFile)
+      } else if (imageUrl.trim()) {
+        // URL image — send as JSON array via images field
+        formData.append('imageUrls', JSON.stringify([imageUrl.trim()]))
+      } else if (existingImages.length > 0) {
+        // Keep existing images
+        formData.append('imageUrls', JSON.stringify(existingImages))
+      }
+
+      const config = { headers: { 'Content-Type': 'multipart/form-data' } }
+
       if (isEdit) {
-        await api.put(`/packages/${id}`, payload)
+        await api.put(`/packages/${id}`, formData, config)
         toast.success('Package updated successfully')
       } else {
-        await api.post('/packages', payload)
+        await api.post('/packages', formData, config)
         toast.success('Package created successfully')
       }
       navigate('/admin/packages')
@@ -274,6 +318,119 @@ export default function AdminAddPackage() {
               <label className="block text-sm font-medium text-gray-700 mb-1">Transport Details</label>
               <input type="text" name="transportDetails" value={form.transportDetails} onChange={handleChange}
                 placeholder="e.g., Round trip flights from Delhi/Mumbai included" className="input-field" />
+            </div>
+          </div>
+        </div>
+
+        {/* Package Image */}
+        <div className="bg-white rounded-2xl shadow-md p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <Image className="w-5 h-5 text-primary-500" />
+            <h3 className="text-lg font-display font-bold text-gray-900">Package Image</h3>
+          </div>
+
+          {/* Mode Toggle */}
+          <div className="flex gap-2 mb-4">
+            <button
+              type="button"
+              onClick={() => { setImageMode('url'); setImageFile(null); if (fileInputRef.current) fileInputRef.current.value = '' }}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold border transition-colors ${
+                imageMode === 'url'
+                  ? 'bg-primary-600 text-white border-primary-600'
+                  : 'bg-white text-gray-600 border-gray-300 hover:border-primary-400'
+              }`}
+            >
+              <Link className="w-4 h-4" />
+              Image URL
+            </button>
+            <button
+              type="button"
+              onClick={() => { setImageMode('upload'); setImageUrl('') }}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold border transition-colors ${
+                imageMode === 'upload'
+                  ? 'bg-primary-600 text-white border-primary-600'
+                  : 'bg-white text-gray-600 border-gray-300 hover:border-primary-400'
+              }`}
+            >
+              <Upload className="w-4 h-4" />
+              Upload File
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Input Side */}
+            <div className="space-y-3">
+              {imageMode === 'url' ? (
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Image URL</label>
+                  <input
+                    type="text"
+                    value={imageUrl}
+                    onChange={handleUrlChange}
+                    placeholder="https://images.unsplash.com/... or /assets/image.jpg"
+                    className="input-field"
+                  />
+                  <p className="text-xs text-gray-400 mt-1">Paste a full URL or a local /assets/ path</p>
+                </div>
+              ) : (
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Upload Image</label>
+                  <div
+                    onClick={() => fileInputRef.current?.click()}
+                    className="border-2 border-dashed border-gray-300 hover:border-primary-400 rounded-xl p-6 text-center cursor-pointer transition-colors"
+                  >
+                    <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                    <p className="text-sm text-gray-500">Click to browse or drag & drop</p>
+                    <p className="text-xs text-gray-400 mt-1">JPG, PNG, WebP — max 5MB</p>
+                  </div>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp"
+                    onChange={handleFileChange}
+                    className="hidden"
+                  />
+                  {imageFile && (
+                    <p className="text-xs text-green-600 mt-2 font-medium">✅ {imageFile.name}</p>
+                  )}
+                </div>
+              )}
+
+              {imagePreview && (
+                <button
+                  type="button"
+                  onClick={handleRemoveImage}
+                  className="flex items-center gap-2 text-sm text-red-500 hover:text-red-700 font-medium transition-colors"
+                >
+                  <Trash2 className="w-4 h-4" />
+                  Remove Image
+                </button>
+              )}
+            </div>
+
+            {/* Preview Side */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Preview</label>
+              {imagePreview ? (
+                <div className="relative rounded-xl overflow-hidden h-48 bg-gray-100 border border-gray-200">
+                  <img
+                    src={imagePreview}
+                    alt="Preview"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.src = 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400'
+                    }}
+                  />
+                  <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-md">
+                    Preview
+                  </div>
+                </div>
+              ) : (
+                <div className="rounded-xl h-48 bg-gray-100 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
+                  <Image className="w-10 h-10 mb-2 opacity-40" />
+                  <p className="text-sm">No image selected</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
