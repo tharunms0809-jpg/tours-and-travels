@@ -108,7 +108,7 @@ const packages = [
     highlights: ['Kemmanagundi', 'Hebbe Falls', 'Z Point', 'Rose Garden'],
     inclusions: ['Travel', 'Stay', 'Food', 'Guide'],
     hotel: { type: 'Standard' },
-    images: ['/assets/kemmanagundi_zpoint_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Hills%2C%20viewpoints%2C%20waterfalls%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Udupi & Maravanthe Beach Package',
@@ -161,7 +161,7 @@ const packages = [
     highlights: ['Krishna Raja Sagara', 'Brindavan Gardens', 'Musical Fountain'],
     inclusions: ['Travel', 'Breakfast & Lunch', 'Guide'],
     hotel: { type: 'Budget' },
-    images: ['/assets/krs_dam_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/KRS%20Dam%20and%20Brindavan%20Gardens%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Biligiri Rangan Hills Wildlife Tour',
@@ -174,7 +174,7 @@ const packages = [
     highlights: ['Biligiriranga Hills', 'Wildlife Safari', 'Nature Trails'],
     inclusions: ['Travel', 'Resort Stay', 'Food', 'Guide'],
     hotel: { type: 'Standard' },
-    images: ['/assets/bandipur_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Wildlife%20sanctuary%2C%20forest%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Karwar Beach Package',
@@ -226,7 +226,7 @@ const packages = [
     highlights: ['Kodachadri', 'Hidlumane Falls', 'Sunset Point'],
     inclusions: ['Trek Guide', 'Travel', 'Food', 'Stay'],
     hotel: { type: 'Standard' },
-    images: ['/assets/kodachadri_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Kodachadri%20mountain%20trek%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Horanadu & Sringeri Spiritual Tour',
@@ -239,7 +239,7 @@ const packages = [
     highlights: ['Horanadu Annapoorneshwari Temple', 'Sringeri'],
     inclusions: ['Travel', 'Stay', 'Food', 'Guide'],
     hotel: { type: 'Standard' },
-    images: ['/assets/sringeri_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Temples%20of%20Horanadu%20and%20Sringeri%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Dharmasthala & Kukke Subramanya Package',
@@ -304,7 +304,7 @@ const packages = [
     highlights: ['Bheemeshwari', 'River Activities', 'Nature Camp'],
     inclusions: ['Resort Stay', 'Adventure Activities', 'Food', 'Guide'],
     hotel: { type: 'Standard' },
-    images: ['/assets/bheemeshwari_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/River%20rafting%2C%20forest%20adventure%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Talakaveri & Madikeri Package',

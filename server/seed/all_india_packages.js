@@ -24,7 +24,7 @@ const packagesData = [
     rating: 4.5,
     reviewCount: 245,
     featured: true,
-    images: ['/assets/goa_hero_banner_1780120545332.png'],
+    images: ['https://image.pollinations.ai/prompt/Popular%20Goa%20beaches%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true'],
     itinerary: [
       { day: 1, title: 'Arrival & Beach Exploration', description: 'Arrive in Goa, hotel check-in, visit Calangute and Baga beaches', activities: ['Hotel Check-in', 'Calangute Beach', 'Baga Beach', 'Beach Shacks Dinner'] },
       { day: 2, title: 'Water Sports & Fort', description: 'Morning water sports at Baga, afternoon Fort Aguada and Anjuna Beach visit', activities: ['Parasailing', 'Jet Ski', 'Banana Boat', 'Fort Aguada', 'Anjuna Beach'] },
@@ -47,7 +47,7 @@ const packagesData = [
     rating: 4.8,
     reviewCount: 189,
     featured: true,
-    images: ['/assets/goa_hero_banner_1780120545332.png'],
+    images: ['https://image.pollinations.ai/prompt/Luxury%20beach%20resorts%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true'],
     itinerary: [
       { day: 1, title: 'Arrival & Relaxation', description: 'Private transfer to luxury resort, evening beach walk at Palolem', activities: ['Airport Pickup', 'Resort Check-in', 'Welcome Drink', 'Palolem Beach Walk', 'Candlelight Dinner'] },
       { day: 2, title: 'Beach & Plantation', description: 'Morning at Colva Beach, afternoon spice plantation tour', activities: ['Colva Beach', 'Spice Plantation Tour', 'Traditional Goan Lunch', 'Spa Session'] },
@@ -70,7 +70,7 @@ const packagesData = [
     exclusions: ['Lunch & Dinner', 'Personal Expenses', 'Insurance'],
     rating: 4.6,
     reviewCount: 312,
-    images: ['/assets/goa_hero_banner_1780120545332.png'],
+    images: ['https://image.pollinations.ai/prompt/Parasailing%20and%20water%20sports%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true'],
     itinerary: [
       { day: 1, title: 'Water Sports Day', description: 'Morning check-in, full day water sports at Baga Beach', activities: ['Hotel Check-in', 'Parasailing', 'Jet Ski', 'Banana Boat Ride', 'Speed Boat'] },
       { day: 2, title: 'Scuba & Departure', description: 'Morning scuba diving session, checkout', activities: ['Scuba Diving', 'Snorkeling', 'Beach Time', 'Checkout', 'Departure'] }
@@ -94,7 +94,7 @@ const packagesData = [
     rating: 4.7,
     reviewCount: 456,
     featured: true,
-    images: ['/assets/kerala_hero_banner_1780120560602.png'],
+    images: ['https://image.pollinations.ai/prompt/Tea%20plantations%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true'],
     itinerary: [
       { day: 1, title: 'Arrival & Tea Gardens', description: 'Arrive in Munnar, check-in, visit tea gardens and tea museum', activities: ['Hotel Check-in', 'Tea Plantation Visit', 'Tea Museum', 'Tea Factory Tour', 'Tea Tasting'] },
       { day: 2, title: 'Sightseeing', description: 'Full day Munnar sightseeing - Mattupetty, Echo Point, Top Station', activities: ['Mattupetty Dam', 'Echo Point', 'Kundala Lake', 'Top Station', 'Photo Point'] },
@@ -117,7 +117,7 @@ const packagesData = [
     rating: 4.9,
     reviewCount: 523,
     featured: true,
-    images: ['/assets/kerala_hero_banner_1780120560602.png'],
+    images: ['https://image.pollinations.ai/prompt/Houseboats%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true'],
     itinerary: [
       { day: 1, title: 'Houseboat Check-in & Cruise', description: 'Board houseboat at noon, cruise through backwaters', activities: ['Houseboat Boarding', 'Welcome Drink', 'Backwater Cruise', 'Village Visit', 'Sunset Viewing', 'Traditional Dinner'] },
       { day: 2, title: 'Morning Cruise & Departure', description: 'Early morning cruise, breakfast, check-out', activities: ['Sunrise Viewing', 'Breakfast on Boat', 'Final Cruise', 'Check-out', 'Departure'] }
@@ -138,7 +138,7 @@ const packagesData = [
     exclusions: ['Personal Expenses', 'Insurance', 'Tips'],
     rating: 4.5,
     reviewCount: 287,
-    images: ['/assets/kerala_hero_banner_1780120560602.png'],
+    images: ['https://image.pollinations.ai/prompt/Forests%20and%20waterfalls%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true'],
     itinerary: [
       { day: 1, title: 'Arrival & Waterfalls', description: 'Arrive in Wayanad, check-in, visit Soochipara and Meenmutty waterfalls', activities: ['Hotel Check-in', 'Soochipara Falls Trek', 'Meenmutty Falls', 'Photography', 'Nature Walk'] },
       { day: 2, title: 'Caves & Dam', description: 'Visit Edakkal Caves and Banasura Sagar Dam', activities: ['Edakkal Caves', 'Ancient Rock Carvings', 'Banasura Dam', 'Boating', 'Sunset Point'] },
@@ -161,7 +161,7 @@ const packagesData = [
     rating: 4.9,
     reviewCount: 412,
     featured: true,
-    images: ['/assets/kerala_hero_banner_1780120560602.png'],
+    images: ['https://image.pollinations.ai/prompt/Kerala%20backwaters%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true'],
     itinerary: [
       { day: 1, title: 'Cochin Arrival', description: 'Arrive Cochin, Fort Kochi sightseeing', activities: ['Airport Pickup', 'Chinese Fishing Nets', 'St. Francis Church', 'Jewish Synagogue', 'Dutch Palace'] },
       { day: 2, title: 'Munnar', description: 'Drive to Munnar, tea plantations visit', activities: ['Scenic Drive', 'Tea Plantations', 'Mattupetty Dam', 'Check-in Luxury Resort'] },
@@ -188,7 +188,7 @@ const packagesData = [
     exclusions: ['Personal Expenses', 'Insurance'],
     rating: 4.6,
     reviewCount: 378,
-    images: ['/assets/mysore_hero_banner_1780120587644.png']
+    images: ['https://image.pollinations.ai/prompt/Tea%20gardens%20and%20hills%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Kodaikanal Family Package',
@@ -205,7 +205,7 @@ const packagesData = [
     exclusions: ['Personal Expenses', 'Insurance'],
     rating: 4.7,
     reviewCount: 298,
-    images: ['/assets/mysore_hero_banner_1780120587644.png']
+    images: ['https://image.pollinations.ai/prompt/Kodaikanal%20lake%20and%20hills%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Rameshwaram Pilgrimage Tour',
@@ -222,7 +222,7 @@ const packagesData = [
     exclusions: ['Train Fare', 'Personal Expenses'],
     rating: 4.8,
     reviewCount: 621,
-    images: ['/assets/varanasi_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Ramanathaswamy%20Temple%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Madurai Temple Heritage Tour',
@@ -239,7 +239,7 @@ const packagesData = [
     exclusions: ['Train Fare', 'Lunch & Dinner', 'Personal Expenses'],
     rating: 4.6,
     reviewCount: 445,
-    images: ['/assets/mysore_hero_banner_1780120587644.png']
+    images: ['https://image.pollinations.ai/prompt/Meenakshi%20Temple%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
 
   // ANDHRA PRADESH & TELANGANA
@@ -258,7 +258,7 @@ const packagesData = [
     exclusions: ['Personal Expenses', 'Insurance'],
     rating: 4.5,
     reviewCount: 234,
-    images: ['/assets/dandeli_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Araku%20landscapes%20and%20coffee%20plantations%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Tirupati Spiritual Package',
@@ -276,7 +276,7 @@ const packagesData = [
     rating: 4.8,
     reviewCount: 782,
     featured: true,
-    images: ['/assets/dharmasthala.jpg']
+    images: ['https://image.pollinations.ai/prompt/Tirumala%20Temple%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Hyderabad Heritage Tour',
@@ -293,7 +293,7 @@ const packagesData = [
     exclusions: ['Airfare', 'Dinner', 'Personal Expenses'],
     rating: 4.6,
     reviewCount: 412,
-    images: ['/assets/hampi_hero_banner_1780120688169.png']
+    images: ['https://image.pollinations.ai/prompt/Charminar%20and%20heritage%20sites%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Ramoji Film City Package',
@@ -310,7 +310,7 @@ const packagesData = [
     exclusions: ['Personal Expenses', 'Additional Rides'],
     rating: 4.7,
     reviewCount: 567,
-    images: ['/assets/hampi_hero_banner_1780120688169.png']
+    images: ['https://image.pollinations.ai/prompt/Ramoji%20Film%20City%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
 
   // MAHARASHTRA
@@ -329,7 +329,7 @@ const packagesData = [
     exclusions: ['Personal Expenses', 'Insurance'],
     rating: 4.5,
     reviewCount: 342,
-    images: ['/assets/nandi_hills_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Hills%20and%20strawberry%20farms%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Lonavala Weekend Tour',
@@ -346,7 +346,7 @@ const packagesData = [
     exclusions: ['Lunch', 'Personal Expenses'],
     rating: 4.4,
     reviewCount: 498,
-    images: ['/assets/nandi_hills_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Green%20valleys%20and%20waterfalls%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Mumbai City Explorer',
@@ -381,7 +381,7 @@ const packagesData = [
     rating: 4.8,
     reviewCount: 456,
     featured: true,
-    images: ['/assets/hampi_hero_banner_1780120688169.png']
+    images: ['https://image.pollinations.ai/prompt/Ajanta%20and%20Ellora%20caves%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
 
   // RAJASTHAN
@@ -401,7 +401,7 @@ const packagesData = [
     rating: 4.7,
     reviewCount: 789,
     featured: true,
-    images: ['/assets/mysore_hero_banner_1780120587644.png']
+    images: ['https://image.pollinations.ai/prompt/Palaces%20and%20forts%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Udaipur Lake City Package',
@@ -419,7 +419,7 @@ const packagesData = [
     rating: 4.9,
     reviewCount: 612,
     featured: true,
-    images: ['/assets/mysore_hero_banner_1780120587644.png']
+    images: ['https://image.pollinations.ai/prompt/Lakes%20and%20palaces%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Jaisalmer Desert Safari',
@@ -437,7 +437,7 @@ const packagesData = [
     rating: 4.8,
     reviewCount: 534,
     featured: true,
-    images: ['/assets/savanadurga_v3.png']
+    images: ['https://image.pollinations.ai/prompt/Camel%20safari%20and%20desert%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Rajasthan Luxury Tour',
@@ -455,7 +455,7 @@ const packagesData = [
     rating: 4.9,
     reviewCount: 423,
     featured: true,
-    images: ['/assets/mysore_hero_banner_1780120587644.png']
+    images: ['https://image.pollinations.ai/prompt/Luxury%20palaces%20and%20forts%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
 
   // HIMACHAL PRADESH
@@ -475,7 +475,7 @@ const packagesData = [
     rating: 4.7,
     reviewCount: 678,
     featured: true,
-    images: ['/assets/manali_hero_banner_1780120753614.png']
+    images: ['https://image.pollinations.ai/prompt/Mountains%20and%20adventure%20sports%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Shimla Family Vacation',
@@ -492,7 +492,7 @@ const packagesData = [
     exclusions: ['Train Fare to Kalka', 'Personal Expenses'],
     rating: 4.6,
     reviewCount: 523,
-    images: ['/assets/manali_hero_banner_1780120753614.png']
+    images: ['https://image.pollinations.ai/prompt/Shimla%20hills%20and%20town%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Spiti Valley Expedition',
@@ -509,7 +509,7 @@ const packagesData = [
     exclusions: ['Personal Expenses', 'Insurance', 'Medical Kit'],
     rating: 4.9,
     reviewCount: 287,
-    images: ['/assets/ladakh_hero_banner_1780120732036.png']
+    images: ['https://image.pollinations.ai/prompt/Spiti%20Valley%20landscapes%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
 
   // UTTARAKHAND
@@ -528,7 +528,7 @@ const packagesData = [
     exclusions: ['Lunch', 'Personal Expenses'],
     rating: 4.5,
     reviewCount: 445,
-    images: ['/assets/nandi_hills_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Nainital%20Lake%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Mussoorie Hills Package',
@@ -545,7 +545,7 @@ const packagesData = [
     exclusions: ['Lunch', 'Personal Expenses'],
     rating: 4.4,
     reviewCount: 389,
-    images: ['/assets/nandi_hills_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Mussoorie%20hill%20views%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Char Dham Yatra',
@@ -563,7 +563,7 @@ const packagesData = [
     rating: 4.8,
     reviewCount: 812,
     featured: true,
-    images: ['/assets/dharmasthala.jpg']
+    images: ['https://image.pollinations.ai/prompt/Himalayan%20pilgrimage%20sites%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
 
   // JAMMU & KASHMIR
@@ -583,7 +583,7 @@ const packagesData = [
     rating: 4.9,
     reviewCount: 567,
     featured: true,
-    images: ['/assets/kerala_hero_banner_1780120560602.png']
+    images: ['https://image.pollinations.ai/prompt/Dal%20Lake%20and%20houseboats%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Gulmarg Snow Adventure',
@@ -600,7 +600,7 @@ const packagesData = [
     exclusions: ['Airfare', 'Advanced Courses', 'Personal Expenses'],
     rating: 4.8,
     reviewCount: 423,
-    images: ['/assets/manali_hero_banner_1780120753614.png']
+    images: ['https://image.pollinations.ai/prompt/Snow%20activities%20and%20mountains%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Kashmir Honeymoon Package',
@@ -618,7 +618,7 @@ const packagesData = [
     rating: 4.9,
     reviewCount: 689,
     featured: true,
-    images: ['/assets/kerala_hero_banner_1780120560602.png']
+    images: ['https://image.pollinations.ai/prompt/Romantic%20Kashmir%20scenery%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
 
   // PUNJAB, UTTAR PRADESH, MADHYA PRADESH
@@ -638,7 +638,7 @@ const packagesData = [
     rating: 4.8,
     reviewCount: 923,
     featured: true,
-    images: ['/assets/dharmasthala.jpg']
+    images: ['https://image.pollinations.ai/prompt/Golden%20Temple%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Agra Taj Mahal Tour',
@@ -656,7 +656,7 @@ const packagesData = [
     rating: 4.7,
     reviewCount: 1234,
     featured: true,
-    images: ['/assets/hampi_hero_banner_1780120688169.png']
+    images: ['https://image.pollinations.ai/prompt/Taj%20Mahal%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Varanasi Spiritual Journey',
@@ -674,7 +674,7 @@ const packagesData = [
     rating: 4.8,
     reviewCount: 756,
     featured: true,
-    images: ['/assets/varanasi_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Ganga%20ghats%20and%20temples%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Khajuraho Heritage Tour',
@@ -691,7 +691,7 @@ const packagesData = [
     exclusions: ['Airfare', 'Panna Safari', 'Personal Expenses'],
     rating: 4.7,
     reviewCount: 445,
-    images: ['/assets/hampi_hero_banner_1780120688169.png']
+    images: ['https://image.pollinations.ai/prompt/Khajuraho%20temples%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Bandhavgarh Wildlife Safari',
@@ -709,7 +709,7 @@ const packagesData = [
     rating: 4.8,
     reviewCount: 312,
     featured: true,
-    images: ['/assets/bandipur_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Tigers%20and%20jungle%20safari%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
 
   // GUJARAT, WEST BENGAL, ODISHA
@@ -728,7 +728,7 @@ const packagesData = [
     exclusions: ['Personal Expenses', 'Photography Fees'],
     rating: 4.6,
     reviewCount: 634,
-    images: ['/assets/chitradurga.png']
+    images: ['https://image.pollinations.ai/prompt/Statue%20of%20Unity%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Rann of Kutch Festival Package',
@@ -746,7 +746,7 @@ const packagesData = [
     rating: 4.9,
     reviewCount: 498,
     featured: true,
-    images: ['/assets/savanadurga_v3.png']
+    images: ['https://image.pollinations.ai/prompt/White%20desert%20and%20festival%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Darjeeling Tea Estate Tour',
@@ -763,7 +763,7 @@ const packagesData = [
     exclusions: ['Train to NJP', 'Personal Expenses'],
     rating: 4.7,
     reviewCount: 523,
-    images: ['/assets/nandi_hills_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Tea%20gardens%20and%20mountains%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Sundarbans Wildlife Package',
@@ -780,7 +780,7 @@ const packagesData = [
     exclusions: ['Personal Expenses', 'Insurance'],
     rating: 4.6,
     reviewCount: 287,
-    images: ['/assets/bandipur_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Mangrove%20forests%20and%20wildlife%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Puri Jagannath Tour',
@@ -797,7 +797,7 @@ const packagesData = [
     exclusions: ['Train Fare', 'Donations', 'Personal Expenses'],
     rating: 4.7,
     reviewCount: 678,
-    images: ['/assets/dharmasthala.jpg']
+    images: ['https://image.pollinations.ai/prompt/Jagannath%20Temple%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Konark Heritage Package',
@@ -814,7 +814,7 @@ const packagesData = [
     exclusions: ['Lunch', 'Personal Expenses'],
     rating: 4.6,
     reviewCount: 445,
-    images: ['/assets/hampi_hero_banner_1780120688169.png']
+    images: ['https://image.pollinations.ai/prompt/Konark%20Sun%20Temple%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
 
   // SIKKIM, ASSAM, MEGHALAYA, LADAKH
@@ -851,7 +851,7 @@ const packagesData = [
     exclusions: ['Airfare to Bagdogra', 'Personal Expenses', 'Medical Kit'],
     rating: 4.7,
     reviewCount: 312,
-    images: ['/assets/ladakh_hero_banner_1780120732036.png']
+    images: ['https://image.pollinations.ai/prompt/Snow%20mountains%20and%20valleys%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Kaziranga Wildlife Safari',
@@ -869,7 +869,7 @@ const packagesData = [
     rating: 4.9,
     reviewCount: 423,
     featured: true,
-    images: ['/assets/nagarhole.jpg']
+    images: ['https://image.pollinations.ai/prompt/One-horned%20rhinoceros%20safari%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Shillong & Cherrapunji Tour',
@@ -886,7 +886,7 @@ const packagesData = [
     exclusions: ['Airfare', 'Personal Expenses'],
     rating: 4.7,
     reviewCount: 398,
-    images: ['/assets/shivanasamudra_hero.jpg']
+    images: ['https://image.pollinations.ai/prompt/Meghalaya%20waterfalls%20and%20valleys%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Leh Ladakh Bike Expedition',
@@ -904,7 +904,7 @@ const packagesData = [
     rating: 4.9,
     reviewCount: 734,
     featured: true,
-    images: ['/assets/ladakh_hero_banner_1780120732036.png']
+    images: ['https://image.pollinations.ai/prompt/Bikes%20on%20Ladakh%20roads%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Pangong Lake Adventure',
@@ -922,7 +922,7 @@ const packagesData = [
     rating: 4.8,
     reviewCount: 612,
     featured: true,
-    images: ['/assets/ladakh_hero_banner_1780120732036.png']
+    images: ['https://image.pollinations.ai/prompt/Pangong%20Lake%2C%20Ladakh%2C%20ultra-realistic%20travel%20photography%2C%204K%2C%20vibrant%20colors%2C%20cinematic%20composition?width=800&height=600&nologo=true']
   },
   {
     title: 'Andaman Island Paradise Package',
