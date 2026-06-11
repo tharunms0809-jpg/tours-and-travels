@@ -226,7 +226,6 @@ export default function AdminPackages() {
           </div>
         )}
       </div>
-    </div>
 
       {/* Quick Image Edit Modal */}
       {imageModal && (
